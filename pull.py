@@ -619,11 +619,11 @@ class YoudaoNoteSession(requests.Session):
 
         if attach_name != '':
             # 默认下载附件到 youdaonote-attachments 文件夹
-            file_dirname = 'youdaonote-attachments'
+            file_dirname = 'attachments'
             file_suffix = attach_name
         else:
             # 默认下载图片到 youdaonote-images 文件夹
-            file_dirname = 'youdaonote-images'
+            file_dirname = 'images'
             # 后缀 png 和 jpeg 后可能出现 ; `**.png;`, 原因未知
             file_suffix = '.' + content_type.split('/')[1].replace(';', '')
 
